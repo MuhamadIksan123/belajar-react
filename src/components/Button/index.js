@@ -1,7 +1,26 @@
-import React from 'react'
+import React from 'react';
+import { Button } from 'react-bootstrap';
 
-export default function Button({ onClick, children }) {
+function SButton({
+  children,
+  action,
+  variant,
+  size,
+  loading,
+  disabeld,
+  className,
+}) {
   return (
-    <button onClick={onClick}>{children}</button>
-  )
+    <Button
+      className={className}
+      onClick={action}
+      variant={variant}
+      disabeld={disabeld}
+      size={size}
+    >
+      {loading ? 'Loading..' : children}
+    </Button>
+  );
 }
+
+export default SButton;
