@@ -7,7 +7,7 @@ function SButton({
   variant,
   size,
   loading,
-  disabeld,
+  disabled,
   className,
 }) {
   return (
@@ -15,7 +15,7 @@ function SButton({
       className={className}
       onClick={action}
       variant={variant}
-      disabeld={disabeld}
+      disabled={disabled}
       size={size}
     >
       {loading ? 'Loading..' : children}
